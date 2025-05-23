@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+	<link href="Piyu-V_dashboard.css" rel="stylesheet" />
+	<title>Piyu-V Dashboard</title>
+	<script src="Piyu-V_script.js"></script>
+
+</head>
+<body>
+	<div id="overlay_save" onclick="off_save()">
+	  <div id="text_save" style="text-align:center"><br><br><br>Report Saved!</div>
+	</div>
+	
+	<div id="overlay_upload" onclick="off_upload()">
+		<div class="file_uploader" id="text_upload">
+			<br>
+			<p style="padding-left:25px; font-size:20px;"><b> Upload Data </b></p>
+			<form action="">
+				<div class="form">
+					<input name="file" id="entry_value" ref="fileInput" type="file" onchange="fileValidation()" multiple>
+					<div> 
+						Upload dataset(s) here or &nbsp
+						<button class="btn bg-color-dblue btn-primary px-4 py-3">Browse</button>
+					</div>
+				</div>
+			</form> 
+		</div>
+	</div>
+	
+	<div class="main_header"> 
+		<a class="brand" href="Piyu-V_home.html" title="Piyu-V"> Piyu-V </a>
+		<p class="dashboard"> Dashboard </p>
+		<div class="header_buttons" style="align: right">
+			<button class="button" onclick="on_save()" style="margin-right: 20px">Save Report</button>
+			<button class="button" onclick="on_upload()">Upload Data</button>
+		</div>
+	</div>
+	
+	<script>
+		// Get the file content from localStorage
+		const fileContent = localStorage.getItem('fileContent');
+
+		if (fileContent) {
+			document.getElementById('file-content').textContent = fileContent;  // Display file content as plain text
+		} else {
+			document.getElementById('file-content').textContent = 'No file content available.';
+		}
+	</script>
+	
+<div class="v1_3">
+	<div class="v3_114">
+		<div class="v3_110">
+		</div>
+		<div class="v5_1105">
+			<div class="v5_1102"></div>
+			<div class="v5_1103"></div>
+			<span class="v5_1104">Maps</span>
+			<div class="v5_1106"></div>
+			<div class="v5_1107"></div>
+		</div>
+		<div class="v3_145">
+			<div class="v3_142"></div>
+			<div class="v3_144"></div>
+			<span class="v3_143">Charts</span>
+			<div class="v5_1078"></div>
+			<div class="v5_1089"></div>
+			<div class="v5_1079"></div>
+			<div class="v5_1082"></div>
+			<div class="v5_1080"></div>
+			<div class="v5_1081"></div>
+			<div class="v5_1083"></div>
+			<div class="v5_1084"></div>
+			<div class="v5_1085"></div>
+			<div class="v5_1086"></div>
+			<div class="v5_1087"></div>
+			<div class="v5_1088"></div>
+			<div class="v5_1090"></div>
+			<div class="v5_1091"></div>
+			<div class="v5_1093"></div>
+		</div>
+		<div class="v3_146">
+			<div class="v3_147"></div>
+			<div class="v3_148"></div>
+			<span class="v3_149">Tables</span>
+			<div class="v4_5"></div>
+			<div class="v4_6"></div>
+			<div class="v4_7"></div>
+			<div class="v4_8"></div>
+			<div class="v4_11"></div>
+			<div class="v5_961"></div>
+			<div class="v5_970"></div>
+			<div class="v5_971"></div>
+			<div class="v5_972"></div>
+			<div class="v5_973"></div>
+			<div class="v5_974"></div>
+			<div class="v5_975"></div>
+			<div class="v5_976"></div>
+			<div class="v5_977"></div>
+			<div class="v5_978"></div>
+			<div class="v5_979"></div>
+			<div class="v5_962"></div>
+			<div class="v5_980"></div>
+			<div class="v5_981"></div>
+			<div class="v5_982"></div>
+			<div class="v5_983"></div>
+			<div class="v5_984"></div>
+			<div class="v5_985"></div>
+			<div class="v5_986"></div>
+			<div class="v5_987"></div>
+			<div class="v5_988"></div>
+			<div class="v5_989"></div>
+			<div class="v5_1071"></div>
+			<div class="v5_1072"></div>
+			<div class="v5_1073"></div>
+			<div class="v5_1074"></div>
+			<div class="v5_1075"></div>
+			<div class="v5_1076"></div>
+			<div class="v5_963"></div>
+			<div class="v5_991"></div>
+			<div class="v5_992"></div>
+			<div class="v5_993"></div>
+			<div class="v5_994"></div>
+			<div class="v5_995"></div>
+			<div class="v5_996"></div>
+			<div class="v5_997"></div>
+			<div class="v5_998"></div>
+			<div class="v5_999"></div>
+			<div class="v5_964"></div>
+			<div class="v5_1001"></div>
+			<div class="v5_1002"></div>
+			<div class="v5_1003"></div>
+			<div class="v5_1004"></div>
+			<div class="v5_1005"></div>
+			<div class="v5_1006"></div>
+			<div class="v5_1007"></div>
+			<div class="v5_1008"></div>
+			<div class="v5_1009"></div>
+			<div class="v5_965"></div>
+			<div class="v5_1011"></div>
+			<div class="v5_1012"></div>
+			<div class="v5_1013"></div>
+			<div class="v5_1014"></div>
+			<div class="v5_1015"></div>
+			<div class="v5_1016"></div>
+			<div class="v5_1017"></div>
+			<div class="v5_1018"></div>
+			<div class="v5_1019"></div>
+			<div class="v5_966"></div>
+			<div class="v5_1021"></div>
+			<div class="v5_1022"></div>
+			<div class="v5_1023"></div>
+			<div class="v5_1024"></div>
+			<div class="v5_1025"></div>
+			<div class="v5_1026"></div>
+			<div class="v5_1027"></div>
+			<div class="v5_1028"></div>
+			<div class="v5_1029"></div>
+			<div class="v5_967"></div>
+			<div class="v5_1031"></div>
+			<div class="v5_1043"></div>
+			<div class="v5_1044"></div>
+			<div class="v5_1045"></div>
+			<div class="v5_1046"></div>
+			<div class="v5_1047"></div>
+			<div class="v5_1048"></div>
+			<div class="v5_1049"></div>
+			<div class="v5_1050"></div>
+			<div class="v5_968"></div>
+			<div class="v5_1052"></div>
+			<div class="v5_1053"></div>
+			<div class="v5_1054"></div>
+			<div class="v5_1055"></div>
+			<div class="v5_1056"></div>
+			<div class="v5_1057"></div>
+			<div class="v5_1058"></div>
+			<div class="v5_1059"></div>
+			<div class="v5_1060"></div>
+			<div class="v5_969"></div>
+			<div class="v5_1062"></div>
+			<div class="v5_1063"></div>
+			<div class="v5_1064"></div>
+			<div class="v5_1065"></div>
+			<div class="v5_1066"></div>
+			<div class="v5_1067"></div>
+			<div class="v5_1068"></div>
+			<div class="v5_1069"></div>
+			<div class="v5_1070"></div>
+			<div class="v5_1077"></div>
+			<div class="v4_12"></div>
+			<div class="v4_13"></div>
+			<div class="v4_9"></div>
+			<div class="v4_10"></div>
+		</div>
+		<div class="v3_117">
+			<div class="v3_113"></div>
+			<div class="v3_116"></div>
+			<span class="v3_115">Insights</span>
+			<div class="v3_118"></div>
+			<div class="v3_120"></div>
+			<div class="v3_121"></div>
+			<div class="v3_122"></div>
+			<div class="v3_135"></div>
+			<div class="v3_140"></div>
+			<div class="v3_137"></div>
+			<div class="v3_136"></div>
+			<div class="v3_139"></div>
+			<div class="v3_138"></div>
+			<div class="v3_119"></div>
+			<div class="v3_125"></div>
+			<div class="v3_126"></div>
+			<div class="v3_131"></div>
+			<div class="v3_132"></div>
+			<div class="v3_133"></div>
+			<div class="v3_134"></div>
+			<div class="v3_127"></div>
+		</div>
+	</div>
+	<div class="v4_3">
+		<div class="v3_27"></div>
+		<div class="v3_33">
+			<div class="name"></div>
+			<span class="v3_37">Quarter</span>
+		</div>
+		<div class="v3_29">
+			<div class="name"></div>
+			<span class="v3_28">PUV Type</span>
+		</div>
+		<div class="v3_105">
+			<div class="name"></div>
+			<span class="v3_109">System Efficiency</span>
+		</div>
+		<div class="v5_382">
+			<div class="v5_385"></div>
+			<span class="v5_381">Clear Filters</span>
+		</div>
+	</div>
+	
+	<div class="v5_1112"></div>
+	<div class="v5_1114"></div>
+</div>
+</body>
+</html>
