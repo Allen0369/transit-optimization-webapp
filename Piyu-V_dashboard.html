@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+	<link href="Piyu-V_dashboard.css" rel="stylesheet" />
+	<title>Piyu-V Dashboard</title>
+	<script src="Piyu-V_script.js"></script>
+
+</head>
+<body>
+	<div id="overlay_save" onclick="off_save()">
+	  <div id="text_save" style="text-align:center"><br><br><br>Report Saved!</div>
+	</div>
+	
+	<div id="overlay_upload" onclick="off_upload()">
+		<div class="file_uploader" id="text_upload">
+			<br>
+			<p style="padding-left:25px; font-size:20px;"><b> Upload Data </b></p>
+			<form action="">
+				<div class="form">
+					<input name="file" id="entry_value" ref="fileInput" type="file" onchange="fileValidation()" multiple>
+					<div> 
+						Upload dataset(s) here or &nbsp
+						<button class="btn bg-color-dblue btn-primary px-4 py-3">Browse</button>
+					</div>
+				</div>
+			</form> 
+		</div>
+	</div>
+	
+	<div class="main_header"> 
+		<a class="brand" href="Piyu-V_home.html" title="Piyu-V"> Piyu-V </a>
+		<p class="dashboard"> Dashboard </p>
+		<div class="header_buttons" style="align: right">
+			<button class="button" onclick="on_save()" style="margin-right: 20px">Save Report</button>
+			<button class="button" onclick="on_upload()">Upload Data</button>
+		</div>
+	</div>
+	
+	<script>
+		// Get the file content from localStorage
+		const fileContent = localStorage.getItem('fileContent');
+
+		if (fileContent) {
+			document.getElementById('file-content').textContent = fileContent;  // Display file content as plain text
+		} else {
+			document.getElementById('file-content').textContent = 'No file content available.';
+		}
+	</script>
+	
+	<div class="dashboard-image" style="text-align: center; padding: 20px; margin-top: 135px">
+		<img src="LSTM.png" alt="Dashboard Overview" style="max-width: 100%;"/>
+	</div>
+</body>
+</html>
